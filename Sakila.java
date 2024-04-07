@@ -6,6 +6,9 @@ import java.sql.Statement;
 
 public class Sakila
 {
+
+  private static Sakila instance;
+
   private Sakila()
   {
     try
@@ -26,13 +29,11 @@ public class Sakila
     }
     catch(SQLException e)
     {
-      // if the error message is "out of memory",
-      // it probably means no database file is found
       e.printStackTrace(System.err);
     }
   }
 
-  public static sincronizacion Sakila getInstance(){
+  public static synchronized Sakila getInstance(){
       if(instance == null) {
           instance = new Sakila();
       }
@@ -40,8 +41,9 @@ public class Sakila
   }
 
   public static void main(String[] args)
-  {
+  {/* 
     Sakila database = Sakila.getInstance();
     System.out.println(database.Sakila())
-  }
+    */
+  } 
 }
