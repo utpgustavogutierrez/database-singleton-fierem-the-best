@@ -43,7 +43,7 @@ public class Sakila
   public static void main(String[] args)
   {/* 
     Sakila database = Sakila.getInstance();
-    System.out.println(database.Sakila())
+    System.out.println(database)
     */
   } 
 }
